@@ -170,7 +170,7 @@ def generate_regional_performance():
                         
 def generate_national_social():
     social = []
-    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "Next Sosyal":"next"}
+    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "NSosyal":"next"}
     for platform in PLATFORMS.keys():
         detail = {"platform":platform, "icon":PLATFORMS[platform]}
         total_post = 0
@@ -217,7 +217,7 @@ def generate_national_social():
     return social
 
 def generate_weekly_social():
-    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "Next Sosyal":"next"}
+    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "NSosyal":"next"}
     social = []
     today = timezone.localdate()
     for i in range(0,6):
@@ -252,7 +252,7 @@ def generate_weekly_social():
 def generate_city_social(city_id):
     city = City.objects.get(id = city_id)
     social = []
-    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "Next Sosyal":"next"}
+    PLATFORMS = {"X (Twitter)":"twitter", "Instagram":"instagram", "NSosyal":"next"}
     for platform in PLATFORMS.keys():
         detail = {"platform":platform, "icon":PLATFORMS[platform]}
         total_post = 0

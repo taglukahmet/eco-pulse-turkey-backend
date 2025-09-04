@@ -1,0 +1,326 @@
+[
+    {
+        "name": "Edirne",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Kahramanmaraş",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Bayburt",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Burdur",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Kırşehir",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Ankara",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Balıkesir",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Mersin",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Hatay",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Ağrı",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Zonguldak",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Şanlıurfa",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Iğdır",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Ordu",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Kütahya",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "İstanbul",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Manisa",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "İzmir",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Isparta",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Yozgat",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Çorum",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Tunceli",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Konya",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Malatya",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Muğla",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Ardahan",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Eskişehir",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Sivas",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Kilis",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Adana",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Kırklareli",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Antalya",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Bitlis",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Afyonkarahisar",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Kırıkkale",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Hakkari",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Kayseri",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Tokat",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Sinop",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Erzurum",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Kastamonu",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Yalova",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Osmaniye",
+        "region": "Akdeniz Bölgesi"
+    },
+    {
+        "name": "Gaziantep",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Çanakkale",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Nevşehir",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Aksaray",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Karaman",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Adıyaman",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Samsun",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Elazığ",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Mardin",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Çankırı",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Bartın",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Diyarbakır",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Muş",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Tekirdağ",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Van",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Bolu",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Karabük",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Sakarya",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Erzincan",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Artvin",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Batman",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Denizli",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Uşak",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Niğde",
+        "region": "İç Anadolu Bölgesi"
+    },
+    {
+        "name": "Trabzon",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Kocaeli",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Aydın",
+        "region": "Ege Bölgesi"
+    },
+    {
+        "name": "Siirt",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Bingöl",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Düzce",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Giresun",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Kars",
+        "region": "Doğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Gümüşhane",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Amasya",
+        "region": "Karadeniz Bölgesi"
+    },
+    {
+        "name": "Bursa",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Şırnak",
+        "region": "Güneydoğu Anadolu Bölgesi"
+    },
+    {
+        "name": "Bilecik",
+        "region": "Marmara Bölgesi"
+    },
+    {
+        "name": "Rize",
+        "region": "Karadeniz Bölgesi"
+    }
+]

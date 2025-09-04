@@ -21,21 +21,16 @@ class City(models.Model):
         ('Akdeniz Bölgesi','Akdeniz Bölgesi'),
         ('Karadeniz Bölgesi','Karadeniz Bölgesi')
     ]
-    NAMES = [
-        ('X (Twitter)', 'X (Twitter)'),
-        ('Next Sosyal', 'Next Sosyal'),
-        ('Instagram', 'Instagram')
-    ]
+    
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=40, null=False, choices=NAMES)
+    name = models.CharField(max_length=40, null=False)
     mainHashtag = models.CharField(null=True, blank=True)
     sentiment = models.JSONField(default=dict, null=True, blank=True)
     inclination = models.CharField(default='', choices=SENTIMENT_OPTIONS)
     hashtags_list = models.JSONField(default=dict, null=True, blank=True)
     topics_list = models.JSONField(default=dict, null=True, blank=True)
     region = models.CharField(null=False, choices=REGIONS)
-    d = models.CharField(null=False)
 
     def set_sentiment(self, positive, neutral, negative):
         self.sentiment = {"Pozitif":positive, "Nötr":neutral, "Negatif":negative}
@@ -118,6 +113,11 @@ class City(models.Model):
         return self.name
     
 class DataofPlatforms(models.Model):
+    NAMES = [
+        ('X (Twitter)', 'X (Twitter)'),
+        ('NSosyal', 'NSosyal'),
+        ('Instagram', 'Instagram')
+    ]
     SENTIMENT_OPTIONS = [
         ('Çok Olumlu', 'Çok Olumlu'),
         ('Olumlu', 'Olumlu'),
@@ -127,7 +127,7 @@ class DataofPlatforms(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=40, null=False)
+    name = models.CharField(max_length=40, null=False, choices=NAMES)
     posts = models.PositiveBigIntegerField()
     city = models.ForeignKey(City, on_delete=models.CASCADE, related_name='platforms')
     mainTopic = models.CharField(null=True, blank=True)

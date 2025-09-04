@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'province_data.apps.ProvinceDataConfig',
-    'admin_live_data_tools.apps.AdminLiveDataToolsConfig',
 ]
 
 MIDDLEWARE = [
@@ -92,14 +91,25 @@ WSGI_APPLICATION = "eco_pulse_turkey_backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "teknofest",
-        "USER": "teknofest",
-        "PASSWORD": "teknofest",
+        "NAME": "teknofest", #your PostgreSQL database name
+        "USER": "teknofest", #your PostgreSQL username
+        "PASSWORD": "teknofest", #your PostgreSQL password (your user's)
         "HOST": "localhost",
         "PORT": "5432",
     }
 }
 
+#if you won't use PostgreSQL, change the code above with that:
+'''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

@@ -9,8 +9,8 @@ class CityPreSerializer(serializers.ModelSerializer):
     hashtags = serializers.SerializerMethodField()
 
     class Meta:
-        fields = ('id', 'name', 'mainHashtag', 'sentiment', 'inclination', 'hashtags', 'region', 'd')
-        read_only_fields = ('id', 'name', 'd', 'region')
+        fields = ('id', 'name', 'mainHashtag', 'sentiment', 'inclination', 'hashtags', 'region')
+        read_only_fields = ('id', 'name', 'region')
         model = City
 
     def get_hashtags(self, obj):

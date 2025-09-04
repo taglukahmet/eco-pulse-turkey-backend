@@ -20,11 +20,22 @@ def main():
     Your main script logic goes here.
     """
     # Assuming 'settings.BASE_DIR' is what you intended for the project root
+    print("\nCreating Cities...")
     from django.conf import settings
-    file_path = settings.BASE_DIR / 'ozet6.json'
+    file_path = settings.BASE_DIR / 'data_province.json'
 
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
+
+    for city in data:
+        province = City.objects.create(name=city.name, region = city.region)
+
+    print("\nCities created")
+    file_path = settings.BASE_DIR / 'data.json'
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
     for platform in data:
         try:
             # Assuming platform['city'] is the name of the city
