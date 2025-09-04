@@ -31,21 +31,27 @@ class CitySerializer(serializers.ModelSerializer):
 
     def get_hashtags(self, obj):
         if obj.hashtags_list and isinstance(obj.hashtags_list, dict):
-            return list (obj.hashtags_list.keys())
+            return (list (obj.hashtags_list.keys()))[0:10]
         return []
     def get_topics(self, obj):
+        topics = []
         if obj.topics_list and isinstance(obj.topics_list, dict):
-            return list (obj.topics_list.keys())
+            topic = obj.topics_list
+            for key,val in topic.items():
+                topics.insert(0,{"text":key,"value":val})
+            return topics[0:10]
         return []
     def get_sentiment(self, obj):
         if obj.sentiment and isinstance(obj.sentiment, dict):
             total = 0
             for val in obj.sentiment.values():
                 total += val
-            pozitif = (float(int((obj.sentiment["Pozitif"]/total)*10000)))/100
-            notr = (float(int((obj.sentiment["Nötr"]/total)*10000)))/100
-            negatif = (float(int((obj.sentiment["Negatif"]/total)*10000)))/100
-            sentiment = {"positive":pozitif,"neutral":notr,"negative":negatif}
+            if total != 0:
+                pozitif = (float(int((obj.sentiment["Pozitif"]/total)*10000)))/100
+                notr = (float(int((obj.sentiment["Nötr"]/total)*10000)))/100
+                negatif = (float(int((obj.sentiment["Negatif"]/total)*10000)))/100
+                sentiment = {"positive":pozitif,"neutral":notr,"negative":negatif}
+            else:sentiment = {"positive":0,"neutral":0,"negative":0}
             return sentiment
     def get_weeklyTrend(self, obj):
         today = timezone.localdate()

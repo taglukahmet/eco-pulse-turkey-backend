@@ -12,7 +12,8 @@ urlpatterns = [
     path('national-agenda/weekly-trends/', NationalTrendsView.as_view(), name='get_national_trends_data'),
     path('national-agenda/regional-performance/', RegionalPerformanceView.as_view(), name='get_regional_performances'),
     path('national-agenda/platform-comparison/', NationalSocialView.as_view(), name='get_national_social_comparison'),
-    path('social-media/city/<uuid:city_id>/', SocialComparisonView.as_view(), name='get_city_social_comparison')
+    path('social-media/city/<uuid:city_id>/', SocialComparisonView.as_view(), name='get_city_social_comparison'),
+    path('provinces/hashtag-scores/', FiltersResultsView.as_view(), name='post_filetr_apply')
 
 ]
 

@@ -87,6 +87,14 @@ class SocialComparisonView(APIView):
             return Response({"detail":"Something went wrong, city not found"}, status=status.HTTP_404_NOT_FOUND)
         socialComparison = generate_city_social(city.id)
         return Response(socialComparison, status=status.HTTP_200_OK)
+    
+class FiltersResultsView(APIView):
+    def post(self, request):
+        if request.data:
+            data = request.data["hashtags"]
+        else: data = []
+        scores = genereate_city_points(data)
+        return Response(scores, status=status.HTTP_200_OK)
 
         
     

@@ -164,7 +164,7 @@ def generate_regional_performance():
                 post_total += i["percentage"]
     for i in performance:
         if post_total != 0:
-            i.update({"percentage":(i["percentage"]/post_total)*100})
+            i.update({"percentage":(float(int((i["percentage"]/post_total)*10000)))/100})
         else: i.update({"percentage": 0})
     return performance
                         
@@ -201,7 +201,7 @@ def generate_national_social():
             detail.update({"topRegion":key})
         hashtags_list = {}
         for pltfrm in platforms:
-            for key, val in platform.hashtags_list.items():
+            for key, val in pltfrm.hashtags_list.items():
                 if key in hashtags_list.keys():
                     itemval = hashtags_list[key]
                     hashtags_list.update({key:itemval + val})
@@ -282,7 +282,7 @@ def generate_city_social(city_id):
         detail.update({"posts":total_post})
         hashtags_list = {}
         for pltfrm in platforms:
-            for key, val in platform.hashtags_list.items():
+            for key, val in pltfrm.hashtags_list.items():
                 if key in hashtags_list.keys():
                     itemval = hashtags_list[key]
                     hashtags_list.update({key:itemval + val})
@@ -296,7 +296,7 @@ def generate_city_social(city_id):
         detail.update({"mainHashtag":mainHashtag})
         topics_list = {}
         for pltfrm in platforms:
-            for key, val in platform.topics_list.items():
+            for key, val in pltfrm.topics_list.items():
                 if key in topics_list.keys():
                     itemval = topics_list[key]
                     topics_list.update({key:itemval + val})
@@ -321,6 +321,47 @@ def generate_city_social(city_id):
         i.update({"impact":impact})
     return social
             
+def genereate_city_points(hastag_list):
+    city_points = []
+    cities = City.objects.all()
+    for city in cities:
+        city_point = 0
+        city = prepare_city(city.id)
+        for hashtag in hastag_list:
+            for key in city.hashtags_list.keys():
+                i=0
+                while i < 5:
+                    if key == hashtag:
+                        city_point += 0.5
+                        i=20
+                    i+=1
+                while i < 10:
+                    if key == hashtag:
+                        city_point += 0.4
+                        i=20
+                    i+=1
+                while i < 15:
+                    if key == hashtag:
+                        city_point += 0.3
+                        i=20
+                    i+=1
+                while i < 20:
+                    if key == hashtag:
+                        city_point += 0.2
+                        i=20
+                    i+=1
+        match len(hastag_list):
+            case 0:
+                city_point = 1.5
+            case 1: 
+                city_point *= 3
+            case 2:
+                city_point = (city_point*3)/2
+            case 3:
+                city_point = city_point
+        city_point = (city_point*2)/3
+        city_points.append({"provinceId":city.id, "score":city_point})
+    return city_points
             
 
         
